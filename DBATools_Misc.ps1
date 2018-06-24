@@ -1,0 +1,2 @@
+Break 
+$env:PSModulePath . split( ';' )

@@ -1,4 +1,5 @@
-import-module dbatools
+Break 
+#Work Variable
 
-Write-Output "dbatools module successfully loaded" 
-function prompt {"PS [$env:username] > "}
+#Personal Variables
+
