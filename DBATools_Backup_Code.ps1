@@ -1,5 +1,12 @@
 Break 
-Restore-DbaDatabase -SqlInstance jeff-lenovo\servera -Path C:\Backup\AdventureWork2012.bak -WithReplace -verbose 
-Restore-DbaDatabase -SqlInstance jeff-lenovo\servera -Path C:\Backup\AdventureWork2012.bak -WithReplace -verbose 
-Restore-DbaDatabase -SqlInstance jeff-lenovo\servera -Path C:\Backup\AdventureWork2012.bak -WithReplace -verbose 
+
+#Backup Maylee
+
+#Change SOURCE (Host\Instance) 
+$SrcSQLInstance = 'jeff-lenovo\servera';
+#Change DESTINATION (Host\Instance)
+$DestSQLInstance = "jeff-lenovo\serverb"; 
+#CHANGE -NetworkShare DESTINATION (\\netork\share)
+Copy-DbaDatabase -verbose -Source $SrcSQLInstance -Destination $DestSQLInstance -AllDatabases -BackupRestore -NetworkShare \\JEFF-LENOVO\Backup;
+
 
