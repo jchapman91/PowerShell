@@ -1,3 +1,9 @@
 Code Notes:
 
 This is where I will put all my work related Notes.
+
+#Profile.ps1
+
+import-module dbatools
+Write-Output "dbatools module successfully loaded" 
+function prompt {"PS [$env:username] > "}
